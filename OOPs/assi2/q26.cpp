@@ -58,10 +58,10 @@ int main() {
 
 
     vector<string> subjects;
-    subjects.push_back("Math");
-    subjects.push_back("Physics");
-    subjects.push_back("Chemistry");
-    subjects.push_back("Computer Science");
+    subjects.push_back("DSA");
+    subjects.push_back("DBMS");
+    subjects.push_back("OOPs");
+    subjects.push_back("ASM");
     subjects.push_back("Electronics");
 
     vector<GradeCard> gradeCards;
