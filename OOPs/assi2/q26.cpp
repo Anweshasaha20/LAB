@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <ctime>  // Needed for seeding the random number generator
+#include <ctime>  
 
 using namespace std;
 
@@ -22,10 +22,10 @@ public:
 
     void calculateCGPA() {
         int totalMarks = 0;
-        for (size_t i = 0; i < marks.size(); i++) {  // Regular for loop instead of range-based for loop
+        for (size_t i = 0; i < marks.size(); i++) {  
             totalMarks += marks[i];
         }
-        CGPA = (float)totalMarks / (marks.size() * 10);  // Assuming CGPA is out of 10
+        CGPA = (float)totalMarks / (marks.size() * 10);  
     }
 
     float getCGPA() const {
@@ -54,9 +54,9 @@ public:
 };
 
 int main() {
-    srand(time(0));  // Seed the random number generator
+    srand(time(0));
 
-    // Creating a vector of subjects without using initializer list
+
     vector<string> subjects;
     subjects.push_back("Math");
     subjects.push_back("Physics");
@@ -67,7 +67,7 @@ int main() {
     vector<GradeCard> gradeCards;
     
     for (int i = 0; i < 60; i++) {
-        // Creating a vector of marks without using initializer list
+
         vector<int> marks;
         marks.push_back(rand() % 101);
         marks.push_back(rand() % 101);
@@ -78,7 +78,7 @@ int main() {
         gradeCards.push_back(GradeCard("IT", "Student " + to_string(i + 1), "Roll" + to_string(i + 1), 3, subjects, marks));
     }
 
-    // Find student with the highest CGPA
+
     GradeCard* topStudent = &gradeCards[0];
     for (int i = 1; i < 60; i++) {
         if (gradeCards[i].getCGPA() > topStudent->getCGPA()) {
